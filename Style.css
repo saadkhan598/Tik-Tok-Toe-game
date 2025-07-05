@@ -1,0 +1,159 @@
+/* Reset & basics */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgba(20, 40, 60, .85);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 500px;
+  width: 95vw;
+  margin: auto;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.player-input {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-input label {
+  flex: 1;
+  text-align: left;
+}
+
+.player-input input, 
+.player-input select {
+  flex: 1.5;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #2c6e49;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background-color: #3a8c65;
+}
+
+.hidden {
+  display: none;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.cell {
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 80px;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.info p {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.buttons button {
+  width: 48%;
+}
+
+#scoreboard, #quitMessage {
+  margin-top: 20px;
+  background-color: rgba(0, 30, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.study-msg {
+  font-size: 2em;
+  font-weight: 900;
+  margin-top: 15px;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px #000;
+}
+
+footer {
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.4);
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .cell {
+    height: 60px;
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px;
+  }
+}

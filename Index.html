@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic-Tac-Toe - Kaata Peeti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+<h1>کاٹا پیٹی</h1>
+    <div id="setup">
+      <div class="player-input">
+        <label for="player1">Player 1:</label>
+        <input type="text" id="player1Name" placeholder="Enter name" />
+        <select id="player1Avatar" aria-label="Player 1 Avatar">
+          <option value="🐯">Tiger 🐯</option>
+          <option value="🐍">Snake 🐍</option>
+          <option value="🐒">Monkey 🐒</option>
+          <option value="🦜">Parrot 🦜</option>
+        </select>
+      </div>
+
+      <div class="player-input">
+        <label for="player2">Player 2:</label>
+        <input type="text" id="player2Name" placeholder="Enter name" />
+        <select id="player2Avatar" aria-label="Player 2 Avatar">
+          <option value="🐻">Bear 🐻</option>
+          <option value="🦁">Lion 🦁</option>
+          <option value="🐸">Frog 🐸</option>
+          <option value="🦉">Owl 🦉</option>
+        </select>
+      </div>
+
+      <button id="startBtn">Start Game</button>
+    </div>
+
+    <div id="game" class="hidden">
+      <div class="info">
+        <p><span id="turnPlayer"></span>'s turn</p>
+      </div>
+
+      <div id="board" class="board">
+        <!-- Cells created dynamically -->
+      </div>
+
+      <div class="buttons">
+        <button id="restartBtn">Restart</button>
+        <button id="quitBtn">Quit</button>
+      </div>
+
+      <div id="scoreboard" class="hidden">
+        <h2>Scoreboard</h2>
+        <p><span id="scorePlayer1"></span>: <span id="score1">0</span></p>
+        <p><span id="scorePlayer2"></span>: <span id="score2">0</span></p>
+      </div>
+    </div>
+
+    <div id="quitMessage" class="hidden">
+      <h2>Scoreboard</h2>
+      <p><span id="finalScorePlayer1"></span>: <span id="finalScore1">0</span></p>
+      <p><span id="finalScorePlayer2"></span>: <span id="finalScore2">0</span></p>
+      <h3 class="study-msg">Now it's time to study </h3>
+    </div>
+  </div>
+
+  <footer>
+    Developed by: Saad Ahmed Khan
+  </footer>
+
+  <audio id="clickSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
